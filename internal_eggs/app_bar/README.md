@@ -1,13 +1,30 @@
-# Parabeac-Egg-Template
-Parabeac eggs are plugins were created to make sure developers could create plugins that changed the way code would be exported.
+# App Bar
+App Bar is an egg that helps designs convert directly to the Flutter implementation of [AppBar](https://api.flutter.dev/flutter/material/AppBar-class.html).
 
-## Getting started
+## Design Protocol / Usage
+Documentation on the designer docs is available [here](https://docs.parabeac.com/plugins/dealing-with-plugins/how-to-create-a-navigation-bar-and-tab-bar).
 
-Clone this repository into your local computer. This will give you a template to kick start the development of your template; it includes all your need create a custom template.
+**Semantic**: <`appbar`>
 
-There are a couple of things to keep in mind while developing your plugin.
-1. Make sure you have a semantic for your plugin, it could be anything; make sure to communicate the semantic with the designer.
-2. Make sure you are extending the correct plugin class.
-3. Finally, place your plugin in the plugins directory inside of Parabeac Core.
+**Subsemantics**:
+* <`leading`>
+   * Maps to the `leading` property.
+* <`middle`>
+   * Maps to the `middle` property.
+* <`traling`>
+   * Maps to the `trailing` property.
+   
+  
+**Design Usage**
+To set up a Navigation Bar like the following:
+![app_bar_sketch](https://github.com/Parabeac/parabeac_eggs/blob/master/internal_eggs/app_bar/images/appbar_sketch.png)
 
-After this, you can run Parabeac Core and watch your plugin do its magic!
+You will want to group your navigation bar into a group. You will then add `.*navbar` to the name of that group.
+As described above, to set the 3 locations of the items in the nav bar, you can use `.*leading`, `.*middle` and `.*trailing`.
+
+## How to install into Parabeac-Core
+
+Download this folder, grab the app_bar.dart file & import into the plugins folder inside of the [Parabec-Core](https://github.com/Parabeac/Parabeac-Core) project at `parabeac-core/lib/plugins/`
+
+## Example Code Export
+TODO:
