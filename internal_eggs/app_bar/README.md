@@ -24,7 +24,7 @@ As described above, to set the 3 locations of the items in the nav bar, you can 
 
 ## How to install into Parabeac-Core
 
-Download this folder, grab the app_bar.dart file & import into the plugins folder inside of the [Parabec-Core](https://github.com/Parabeac/Parabeac-Core) project at `parabeac-core/lib/plugins/`
+Download this folder, grab the app_bar.dart file & import into the plugins folder inside of the [Parabeac-Core](https://github.com/Parabeac/Parabeac-Core) project at `parabeac-core/lib/plugins/`
 
 ## Example Code Export
 TODO:
