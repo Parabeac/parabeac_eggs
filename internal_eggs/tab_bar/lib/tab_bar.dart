@@ -1,8 +1,9 @@
 import 'package:parabeac_core/controllers/main_info.dart';
+import 'package:parabeac_core/design_logic/design_node.dart';
 import 'package:parabeac_core/generation/generators/pb_flutter_generator.dart';
 import 'package:parabeac_core/generation/generators/pb_generator.dart';
 import 'package:parabeac_core/generation/generators/pb_widget_manager.dart';
-import 'package:parabeac_core/input/entities/layers/abstract_layer.dart';
+import 'package:parabeac_core/input/sketch/entities/layers/abstract_layer.dart';
 import 'package:parabeac_core/plugins/injected_tab.dart';
 import 'package:parabeac_core/interpret_and_optimize/entities/interfaces/pb_inherited_intermediate.dart';
 import 'package:parabeac_core/interpret_and_optimize/entities/interfaces/pb_injected_intermediate.dart';
@@ -13,9 +14,7 @@ import 'package:parabeac_core/interpret_and_optimize/value_objects/point.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
-
-class InjectedTabBar extends PBNakedPluginNode
-    implements PBInjectedIntermediate {
+class InjectedTabBar extends PBEgg implements PBInjectedIntermediate {
   final String UUID;
   PBContext currentContext;
   String semanticName = '.*tabbar';
@@ -29,7 +28,7 @@ class InjectedTabBar extends PBNakedPluginNode
     this.UUID, {
     this.currentContext,
   }) : super(topLeftCorner, bottomRightCorner, currentContext) {
-    generator = PBTabBarGenerator(currentContext.generationManager);
+    generator = PBTabBarGenerator();
   }
 
   @override
@@ -56,20 +55,20 @@ class InjectedTabBar extends PBNakedPluginNode
   void alignChild() {}
 
   @override
-  PBNakedPluginNode generatePluginNode(
-      Point topLeftCorner, Point bottomRightCorner, SketchNode originalRef) {
+  PBEgg generatePluginNode(
+      Point topLeftCorner, Point bottomRightCorner, DesignNode originalRef) {
     return InjectedTabBar(topLeftCorner, bottomRightCorner, UUID,
         currentContext: currentContext);
   }
 
   @override
-  void extractInformation(SketchNode incomingNode) {
+  void extractInformation(DesignNode incomingNode) {
     // TODO: implement extractInformation
   }
 }
+
 class PBTabBarGenerator extends PBGenerator {
-  final PBGenerationManager manager;
-  PBTabBarGenerator(this.manager) : super('TABBAR');
+  PBTabBarGenerator() : super('TABBAR');
 
   @override
   String generate(PBIntermediateNode source) {
