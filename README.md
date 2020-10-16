@@ -17,10 +17,14 @@ All a Parabeac Egg does is introduce a new semantic into the Parabeac Design Pro
 ### Creating Eggs
 To create an egg, head over to the [parabeac_egg_template repo](https://github.com/Parabeac/parabeac-egg-template).
 
-Below is a list of parabeac developed eggs & community developed eggs. Some eggs like `tab_bar` rely on sub eggs like tab. We currently don't support automatic dependency downloads so if you see an egg that has a sub egg, you'll have to install it manually. You can learn how to install an egg __here__. If you'd like to add your egg to this repo, email us at dev@parabeac.com or make a PR! 
+Below is a list of parabeac developed eggs & community developed eggs. Some eggs like `tab_bar` rely on sub eggs like tab. We currently don't support automatic dependency downloads so if you see an egg that has a sub egg, you'll have to install it manually. You can learn how to install an egg __here__. If you'd like to add your egg to this repo, make a PR! 
 
  * [App Bar](https://github.com/Parabeac/parabeac_eggs/tree/master/internal_eggs/app_bar)
  * [Tab Bar](https://github.com/Parabeac/parabeac_eggs/tree/master/internal_eggs/tab_bar)
    * [Tab](https://github.com/Parabeac/parabeac_eggs/tree/master/internal_eggs/tab)
+ * [Date Picker](https://github.com/Parabeac/parabeac_eggs/tree/master/internal_eggs/date_picker)
+ * [Text Field](https://github.com/Parabeac/parabeac_eggs/tree/master/internal_eggs/text_field)
+
+
 
 We are working on creating a full marketplace for eggs but in the meantime, please bear with us & feel free to send us any feedback you may have!!!
